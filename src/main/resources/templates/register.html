@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>
+        <form th:action="@{/Register}" method="POST">
+            <label> Nome</label><br>
+            <input type="text" name="name" required/>
+            <br><label>Salario</label><br>
+            <input type="number" name="salary" required/>
+            <br><label>Carga Horaria</label><br>
+            <input type="number" name="workload" required/>
+            <br><label>Idade</label><br>
+            <input type="number" name="age" required/><br>
+            <input type="submit" value="Cadastrar" />
+        </form> 
+    </h1>
+    <p th:if="${inserido == false}">Não foi possível inserir,reveja os dados </p>
+</body>
+</html>
