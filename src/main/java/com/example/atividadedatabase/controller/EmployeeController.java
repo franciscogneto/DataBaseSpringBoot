@@ -19,8 +19,10 @@ public class EmployeeController {
     @PostMapping("/Register")
     public ModelAndView registerEmployee(@ModelAttribute Employee employee) {
         ModelAndView mv = new ModelAndView("register");
-        if (employee.getName().trim().length() == 0)
+        if (employee.getName().trim().length() == 0){
             mv.addObject("inserido", false);
+            return mv;
+        }     
         mv.addObject("inserido", service.insertEmployee(employee));
         return mv;
     }
