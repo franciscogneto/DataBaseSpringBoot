@@ -26,7 +26,7 @@ public class EmployeeController {
         mv.addObject("inserido", service.insertEmployee(employee));
         return mv;
     }
-
+    
     @GetMapping("/Register")
     public ModelAndView employee() {
         ModelAndView mv = new ModelAndView("register");
