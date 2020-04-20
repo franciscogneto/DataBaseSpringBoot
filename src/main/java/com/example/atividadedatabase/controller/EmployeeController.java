@@ -30,7 +30,7 @@ public class EmployeeController {
     @GetMapping("/Register")
     public ModelAndView employee() {
         ModelAndView mv = new ModelAndView("register");
-        mv.addObject("inserido", true);
+        mv.addObject("inserido", true);//Para não aparecer a mensagem de erro
         return mv;
     }
 

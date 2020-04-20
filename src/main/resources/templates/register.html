@@ -12,15 +12,15 @@
         <label> Nome</label><br>
         <input type="text" name="name"  required/>
         <br><label>Salario</label><br>
-        <input type="number" name="salary" min="1045" max="20000" step="0.01" required />
+        <input type="number" name="salary" min="1045" step="0.01" required />
         <br><label>Carga Horaria</label><br>
-        <input type="number" name="workload" required />
+        <input type="number" name="workload" required  />
         <br><label>Idade</label><br>
         <input type="number" name="age" required /><br>
         <input type="submit" value="Cadastrar" />
     </form>
     <a href='\Employee'>Funcionários</a>
-    <p th:if="${inserido == false}">Não foi possível inserir, reveja os dados</p>
+    <p th:if="${inserido == false}">Não foi possível inserir, reveja os dados inseridos</p>
 </body>
 
 </html>
